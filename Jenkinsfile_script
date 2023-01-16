@@ -13,6 +13,7 @@ pipeline {
         //}
         stage('Call Script') {
             steps {
+                sh 'echo "hello Github Webhook with Jenkins"'
                 sh 'chmod +x scripts/sayhello.sh'
                 sh 'scripts/sayhello.sh ${TOPIC_NAME} ${TARGET}'
             }
